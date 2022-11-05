@@ -144,6 +144,19 @@ The way that works is we have a subthreshold current that has an exponential dep
 
 ![image](https://user-images.githubusercontent.com/110079729/199910810-4962f9ed-95e8-4857-ae3f-8acf9d9fe634.png)
 
+* Inputs
+
+1. CLK_REF: System clock taken from input.
+
+2. RESET_COUNTERn: Input signal to reset the module initial state.
+
+3. SEL_CONV_TIME: Four bit input used to select how many times the 1 bit of the output DOUT is fractionated (0-16).
+
+* Outputs
+
+1. DOUT: The output voltage whose frequency is dependent on temperature.
+
+2. DONE: Validity signal for DOUT
 
 Theses are the verilog template files which are used for the creation of netlist verilog files.
 
