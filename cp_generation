@@ -1,1 +1,22 @@
+#AUX_CELL GENERATION
+
+In Open FASoC Flow to generate a automated Analog design few auxilaury cells are required to be created which cannot me implemented with existing library cells (like Header and SLC in temp_sence_gen).
+They have simple analog functionality usually associated with the structure of the auxiliary cell.“ALIGN” tool is used to .lef and .gds for auxiliary cells.
+
+
+
+# PLL GENERATOR
+
+
+A Phase locked loop(PLL) mainly consists of the following four blocks:-
+1. Phase Detector(PD)
+2. Charge Pump (CP)
+3. Voltage Controlled Oscillator (VCO)
+4. Frequency Divider (FD)
+
+
+### Charge Pump (CP)
+Charge Pump is used to convert the digital measure of the phase difference done in the Phase Detector into a analog control signal, which is used to control the Voltage Controlled Oscillator in the next stage.
+In the construction of the Charge Pump we use a current steering model which makes it a Analog block. Here when the UP signal is high the current flows from Vdd to output which charges the load capacitance. When the DOWN signal is high the current flows from load capacitance to ground which is discharging of the current.
+
 
